@@ -29,20 +29,20 @@
   },
   "commands": {
     "capture-selection": {
-      "suggested_key": { "default": "Ctrl+Shift+Q", "mac": "Command+Shift+Q" },
+      "suggested_key": { "default": "Ctrl+Q", "mac": "MacCtrl+Q" },
       "description": "抓取当前选区文本并发送给 LLM（先在页面选中文字）"
     },
     "capture-visible": {
-      "suggested_key": { "default": "Ctrl+Shift+E", "mac": "Command+Shift+E" },
+      "suggested_key": { "default": "Ctrl+E", "mac": "MacCtrl+E" },
       "description": "截图当前可见区域，可拖框裁剪后发给多模态 LLM"
     },
     "capture-page": {
-      "suggested_key": { "default": "Ctrl+Shift+P", "mac": "Command+Shift+P" },
+      "suggested_key": { "default": "Ctrl+P", "mac": "MacCtrl+P" },
       "description": "[实验] 抓取整页可读文本（document.innerText 前 6000 字符）。长页面会显著增加 token 消耗与延迟。"
     },
     "toggle-bubble": {
-      "suggested_key": { "default": "Ctrl+Shift+H", "mac": "Command+Shift+H" },
-      "description": "显示或隐藏右下角答题气泡；按一次显示，再按一次收起"
+      "suggested_key": { "default": "Ctrl+H", "mac": "MacCtrl+H" },
+      "description": "显示或隐藏当前页面的答题结果界面；按一次收起，再按一次展开（内容不丢）"
     }
   },
   "content_scripts": [

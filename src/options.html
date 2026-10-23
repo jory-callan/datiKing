@@ -78,35 +78,40 @@
 
   <section>
     <h2>快捷键</h2>
-    <p class="muted">在 <code>chrome://extensions/shortcuts</code> 中可重新绑定这 4 个命令。Windows / Linux 用 <kbd>Ctrl</kbd>，macOS 用 <kbd>⌘ Command</kbd>。</p>
+    <p class="muted">在 <code>chrome://extensions/shortcuts</code> 中可重新绑定这 4 个命令。Windows / Linux 用 <kbd>Ctrl</kbd>，macOS 用 <kbd>⌃ Control</kbd>（Chrome 会把 macOS 上的 <kbd>Ctrl</kbd> 自动换成 <kbd>⌘ Command</kbd>，所以这里在 manifest 里显式指定了 <code>MacCtrl</code>）。</p>
     <table class="kbd-table">
       <thead>
         <tr>
-          <th>快捷键</th>
+          <th>Windows / Linux</th>
+          <th>macOS</th>
           <th>作用</th>
           <th>何时用</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><kbd>Ctrl+Shift+Q</kbd></td>
+          <td><kbd>Ctrl+Q</kbd></td>
+          <td><kbd>⌃Q</kbd></td>
           <td><b>抓取选区</b></td>
           <td>先在页面选中一段文字（含中文 / 公式 / 代码皆可），按后把选区文本发给 LLM。推荐：网页上能直接选中的题。</td>
         </tr>
         <tr>
-          <td><kbd>Ctrl+Shift+E</kbd></td>
+          <td><kbd>Ctrl+E</kbd></td>
+          <td><kbd>⌃E</kbd></td>
           <td><b>抓取可见区域</b>（截图）</td>
           <td>整页变暗后拖框选区裁剪，截图发给多模态 LLM。推荐：题目是图片、表格、代码截图、PDF 阅读器视图，或反爬不让选。</td>
         </tr>
         <tr>
-          <td><kbd>Ctrl+Shift+P</kbd></td>
+          <td><kbd>Ctrl+P</kbd></td>
+          <td><kbd>⌃P</kbd></td>
           <td><b>抓取整页 DOM 文本</b></td>
           <td>无选区时把整页 <code>innerText</code> 前 6000 字符发给 LLM。推荐：长文章 / 整段题文 / 多选合集。</td>
         </tr>
         <tr>
-          <td><kbd>Ctrl+Shift+H</kbd></td>
-          <td><b>显示 / 隐藏气泡</b></td>
-          <td>答题完成后想收起气泡（不删除内容），再按一次又出现。气泡拖到屏幕任何位置可记忆。</td>
+          <td><kbd>Ctrl+H</kbd></td>
+          <td><kbd>⌃H</kbd></td>
+          <td><b>显示 / 隐藏结果界面</b></td>
+          <td>答题完成后想收起结果面板（不删除内容），再按一次又出现。右下角「王」字悬浮按钮的显隐请用工具栏 popup 里的按钮。气泡可拖到屏幕任何位置并被记住。</td>
         </tr>
       </tbody>
     </table>

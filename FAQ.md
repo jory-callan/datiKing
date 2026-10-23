@@ -39,13 +39,13 @@ A: 不会。两个模式都要求模型回 JSON `{answer, ...}`，只是 reasoni
 A: 检查是否有 `getSelection().toString()` 文本。有些页面（如 PDF reader、Shadow DOM）`window.getSelection` 拿不到。试试「整页 DOM 文本」或「截图」通道。
 
 **Q: 截图框选一闪就退出？**
-A: 把「划段文字 → Ctrl+Shift+E」改成至少拖 3 像素再松手。1 px 内的 click 算作取消。`Ctrl+Shift+H` 是隐藏气泡（不是框选）。
+A: 把「划段文字 → `Ctrl+E`（macOS `⌃E`）」改成至少拖 3 像素再松手。1 px 内的 click 算作取消。`Ctrl+H`（macOS `⌃H`）是隐藏结果界面（不是框选）。
 
 **Q: 截图发给 LLM 安全吗？**
 A: 截图经 `canvas` 重画后 base64 → POST 到你填的 endpoint。中间**不**经过我们任何服务器。endpoint 是你自己配置的（OpenAI / DeepSeek / 自建）。
 
 **Q: 气泡一直不消失？**
-A: `Ctrl+Shift+H` 切换。或点气泡右上角 `—`（最小化）/ `✕`（关闭，**会清空内容**）。
+A: `Ctrl+H`（macOS `⌃H`）切换结果界面的显示隐藏。或点气泡右上角 `—`（最小化）/ `✕`（关闭，**会清空内容**）。右下角「王」字悬浮按钮的显隐则在工具栏 popup 里点「显示/隐藏 王字气泡」。
 
 ## 故障排查
 

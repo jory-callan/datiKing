@@ -95,7 +95,8 @@ kbd { background: #eef0f6; padding: 2px 6px; border-radius: 6px; font-family: ui
 .kbd-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .kbd-table th, .kbd-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eaeaf2; vertical-align: top; }
 .kbd-table th { color: #6b7080; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
-.kbd-table td:first-child { white-space: nowrap; width: 160px; }
+.kbd-table td:nth-child(1) { white-space: nowrap; width: 120px; }
+.kbd-table td:nth-child(2) { white-space: nowrap; }
 .history {
   margin-top: 12px;
   max-height: 280px;

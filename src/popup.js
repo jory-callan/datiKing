@@ -5,17 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const k = btn.getAttribute("data-k");
       const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
       if (!tab) return;
-      // show-fab is a direct message (no capture payload), the rest go through aqh/capture.
+      // show-fab / toggle-bubble are direct messages (no capture payload), the rest go through aqh/capture.
       const msg = (k === "show-fab")
         ? { type: "aqh/show-fab" }
-        : { type: "aqh/capture", payload: { kind: k } };
+        : (k === "toggle-bubble")
+          ? { type: "aqh/toggle-bubble" }
+          : { type: "aqh/capture", payload: { kind: k } };
       chrome.tabs.sendMessage(tab.id, msg, (res) => {
         if (chrome.runtime.lastError) { $("status").textContent = "当前页面不可用"; return; }
         if (k === "show-fab" && res && typeof res.shown === "boolean") {
           $("status").textContent = res.shown ? "已召唤 王字气泡" : "已收起 王字气泡";
         }
+        if (k === "toggle-bubble" && res && res.ok) {
+          $("status").textContent = !res.exists
+            ? "当前页面还没有结果界面"
+            : (res.shown ? "已展开 结果界面" : "已收起 结果界面");
+        }
       });
-      if (k !== "show-fab") $("status").textContent = "已发送：" + k;
+      if (k !== "show-fab" && k !== "toggle-bubble") $("status").textContent = "已发送：" + k;
     });
   });
   $("opts").addEventListener("click", () => chrome.runtime.openOptionsPage());

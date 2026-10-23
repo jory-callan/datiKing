@@ -98,6 +98,14 @@
     if (root) root.innerHTML = "";
   }
 
+  // 显示 / 隐藏结果界面：只切隐藏类，内容保留（等同气泡右上角的「—」）。
+  function toggleBubble() {
+    const bubble = document.getElementById("aqh-bubble");
+    if (!bubble) return { exists: false, shown: false };
+    bubble.classList.toggle("aqh-hide");
+    return { exists: true, shown: !bubble.classList.contains("aqh-hide") };
+  }
+
   function enableDrag(box, handle) {
     let sx = 0, sy = 0, ox = 0, oy = 0, dragging = false;
     handle.addEventListener("mousedown", (e) => {
@@ -611,7 +619,7 @@
           '<span class="aqh-fab-btn" data-k="selection">选区</span>' +
           '<span class="aqh-fab-btn" data-k="visible">截图</span>' +
           '<span class="aqh-fab-btn" data-k="page">整页</span>' +
-          '<span class="aqh-fab-btn" data-k="toggle">气泡</span>';
+          '<span class="aqh-fab-btn" data-k="result">结果</span>';
         fab.querySelectorAll("[data-k]").forEach((el) => {
           el.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -642,9 +650,9 @@
   }
 
   async function handleTrigger(kind) {
-    if (kind === "toggle") {
-      // Toggle the 王字 FAB (default hidden, click to summon).
-      toggleFab();
+    if (kind === "result") {
+      // Toggle the result panel (答题结果界面)，内容保留。
+      toggleBubble();
       return;
     }
     try {
@@ -687,6 +695,10 @@
     if (msg.type === "aqh/show-fab") {
       const shown = toggleFab();
       return sendResponse({ ok: true, shown });
+    }
+    if (msg.type === "aqh/toggle-bubble") {
+      const st = toggleBubble();
+      return sendResponse({ ok: true, exists: st.exists, shown: st.shown });
     }
     if (msg.type === "aqh/ping") {
       sendResponse({ ok: true });

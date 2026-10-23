@@ -117,6 +117,13 @@ async function triggerCapture(kind) {
   await sendToContent(tab, "aqh/capture", { kind });
 }
 
+// 显示 / 隐藏当前页面的答题结果界面（收起不丢内容）。
+async function toggleResultBubble() {
+  const tab = await getActiveTab();
+  if (!tab) return;
+  await sendToContent(tab, "aqh/toggle-bubble", {});
+}
+
 async function captureVisibleToBase64(tab) {
   // chrome 旗舰 API：直接拿可见窗口快照（PNG）。
   return new Promise((resolve, reject) => {
@@ -359,7 +366,7 @@ chrome.commands.onCommand.addListener(async (cmd) => {
   if (cmd === "capture-selection") return triggerCapture("selection");
   if (cmd === "capture-visible") return triggerCapture("visible");
   if (cmd === "capture-page") return triggerCapture("page");
-  if (cmd === "toggle-bubble") return triggerCapture("toggle");
+  if (cmd === "toggle-bubble") return toggleResultBubble();
 });
 
 // 来自 content 的消息
