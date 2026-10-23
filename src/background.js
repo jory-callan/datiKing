@@ -1,5 +1,5 @@
 /**
- * QuizKing · 答题王 — background service worker.
+ * datiKing · 答题王 — background service worker.
  * @license MIT
  *
  * Responsibilities:

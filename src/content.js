@@ -1,5 +1,5 @@
 /**
- * QuizKing · 答题王 — content script injected into every page.
+ * datiKing · 答题王 — content script injected into every page.
  * @license MIT
  *
  * Three capture modes:
@@ -65,7 +65,7 @@
     if (opts.hidden) wrap.classList.add("aqh-hide");
     wrap.innerHTML =
       '<div id="aqh-header">' +
-        '<div id="aqh-title"><span id="aqh-title-glyph">王</span><span id="aqh-title-text">QuizKing · 答题王</span></div>' +
+        '<div id="aqh-title"><span id="aqh-title-glyph">王</span><span id="aqh-title-text">datiKing · 答题王</span></div>' +
         '<div id="aqh-actions">' +
           '<button data-act="settings" title="设置">⚙</button>' +
           '<button data-act="min" title="隐藏">—</button>' +
@@ -604,7 +604,7 @@
     if (fab) return fab;
     fab = document.createElement("button");
     fab.id = "aqh-fab";
-    fab.title = "QuizKing · 答题王";
+    fab.title = "datiKing · 答题王";
     fab.textContent = "王";
     fab.style.fontFamily = '"PingFang SC","Microsoft YaHei",Heiti,sans-serif';
     fab.style.fontWeight = "700";

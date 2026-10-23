@@ -6,7 +6,7 @@
   "version": "0.3.0",
   "minimum_chrome_version": "114",
   "action": {
-    "default_title": "QuizKing · 答题王",
+    "default_title": "datiKing · 答题王",
     "default_popup": "popup.html"
   },
   "background": {

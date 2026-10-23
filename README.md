@@ -1,6 +1,6 @@
 <div align="center">
 
-# QuizKing · 答题王
+# datiKing · 答题王
 
 > 把网页上看到的题目（截图 / 划词 / DOM）丢给 OpenAI 兼容 LLM，把答案 / 解析吐回悬浮气泡。
 
@@ -10,26 +10,8 @@
 [![Chrome 114+](https://img.shields.io/badge/chrome-114%2B-4285f4)](#安装)
 [![No telemetry](https://img.shields.io/badge/telemetry-none-2ea44f)](#隐私与安全)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](../../pulls)
-[![Bilibili](https://img.shields.io/badge/B站-97727630-00aeec?logo=bilibili&logoColor=white)](https://space.bilibili.com/97727630)
 
 </div>
-
-## 目录
-
-- [特性](#特性)
-- [30 秒试用](#30-秒试用)
-- [安装](#安装)
-- [配置](#配置)
-- [使用](#使用)
-- [架构](#架构)
-- [消息路由](#消息路由)
-- [开发](#开发)
-- [FAQ](#faq)
-- [隐私与安全](#隐私与安全)
-- [路线图](#路线图)
-- [贡献](#贡献)
-- [作者](#作者)
-- [许可](#许可)
 
 ## 特性
 
@@ -181,7 +163,7 @@
 ### 文件树
 
 ```
-QuizKing/
+datiKing/
 ├─ assets/
 │  └─ screenshots/                # README 截图
 ├─ src/                           # 扩展源码（加载这一层即可运行）
@@ -242,7 +224,7 @@ docs/  .doc/                      # 本地文档（已在 .gitignore，不随仓
 
 ```bash
 # 1. 改 src/ 下的代码
-# 2. chrome://extensions/ → QuizKing → ♻ 重新加载
+# 2. chrome://extensions/ → datiKing → ♻ 重新加载
 # 3. 普通网页 F12 → console 看 [aqh] 调试日志
 # 4. SW DevTools: chrome://extensions → "service worker" 链接 → console
 ```
@@ -310,15 +292,6 @@ const svg = fs.readFileSync('src/icons/icon.svg');
 
 > `host_permissions` 仅用于 content 注入；不出站。
 
-## 路线图
-
-- [ ] 选择 / 判断 / 填空的结构化答案注入
-- [ ] 题型 Prompt 模板库（数学 / 编程 / 英语 / 医学）
-- [ ] 站点规则：每个域名可独立 prompt + 模型
-- [ ] 本地 OCR 引擎（Tesseract.js）作为非视觉模型 fallback
-- [ ] Firefox 适配
-- [ ] Chrome Web Store 发布
-
 ## 贡献
 
 欢迎 fork & PR：
@@ -329,17 +302,6 @@ const svg = fs.readFileSync('src/icons/icon.svg');
 4. 提 PR，附带：改了什么 / 为什么 / 怎么验证 / 风险点
 5. 维护者审 → 合入
 
-## 作者
-
-[![Bilibili](https://img.shields.io/badge/Bilibili-97727630-00aeec?logo=bilibili&logoColor=white)](https://space.bilibili.com/97727630)
-
-问题反馈 / 合作 / 想看教程 → B 站私信。
-
-
-## 致谢
-
-- [linux.do](https://linux.do/) — 中文独立技术社区，给了工具 / 思路上的大量启发与反馈
-
 ## 许可
 
 [MIT](./LICENSE) — 自由使用、修改、分发。
@@ -348,6 +310,6 @@ const svg = fs.readFileSync('src/icons/icon.svg');
 
 <div align="center">
 
-Made with care for students, self-learners, and anyone staring at quiz screenshots at 2 a.m.
+self-tools, use it as yours
 
 </div>

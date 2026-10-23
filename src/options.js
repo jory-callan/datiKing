@@ -1,4 +1,4 @@
-/** @license MIT — QuizKing · 答题王 options page. */
+/** @license MIT — datiKing · 答题王 options page. */
 const FIELDS = [
   "providers",
   "temperature",

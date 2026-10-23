@@ -1,4 +1,4 @@
-/* QuizKing · 答题王 bubble styles - injected via manifest. Use a host id prefix to avoid collisions. */
+/* datiKing · 答题王 bubble styles - injected via manifest. Use a host id prefix to avoid collisions. */
 /* @license MIT */
 
 #aqh-root {
@@ -40,7 +40,7 @@
   opacity: clamp(0.3, (var(--aqh-o, 0.95) - 0.4) / 0.4, 1);
 }
 
-/* The title row (王 glyph + "QuizKing · 答题王") fades out completely,
+/* The title row (王 glyph + "datiKing · 答题王") fades out completely,
    vanishing at the 0.4 floor — branding blends away first. The header stays
    as the drag handle and keeps the ⚙/—/✕ buttons. */
 #aqh-title {

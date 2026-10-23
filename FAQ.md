@@ -67,7 +67,7 @@ A: 检查选项页 Prompt 模式。如果是「只要答案」，UI 强制不显
 ## 开发者
 
 **Q: 怎么调试？**
-A: 普通网页 F12 → console 找 `[aqh]` 日志。Service worker 日志在 `chrome://extensions/` → QuizKing → 「service worker」链接。
+A: 普通网页 F12 → console 找 `[aqh]` 日志。Service worker 日志在 `chrome://extensions/` → datiKing → 「service worker」链接。
 
 **Q: 离线自检路由？**
 A: SW DevTools 跑：

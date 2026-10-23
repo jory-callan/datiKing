@@ -1,4 +1,4 @@
-/** @license MIT — QuizKing · 答题王 toolbar popup. */
+/** @license MIT — datiKing · 答题王 toolbar popup. */
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-k]").forEach((btn) => {
     btn.addEventListener("click", async () => {
