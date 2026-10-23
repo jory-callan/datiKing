@@ -1,3 +1,5 @@
+> Please provide as many as you can.
+
 ## What
 
 <!-- One-paragraph description of the change. -->
@@ -9,7 +11,7 @@
 ## How to verify
 
 <!-- Concrete steps a reviewer can run to confirm the change works. -->
-1. `chrome://extensions/` → reload AI Quiz Helper.
+1. `chrome://extensions/` → reload AI datiKing Helper.
 2. …
 
 ## Risk

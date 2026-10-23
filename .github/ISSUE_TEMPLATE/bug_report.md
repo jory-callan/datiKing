@@ -6,6 +6,8 @@ labels: bug
 assignees: ""
 ---
 
+> Please provide as many as you can.
+
 ## What happened
 
 <!-- One-sentence summary. -->
@@ -26,10 +28,10 @@ assignees: ""
 ## Environment
 
 - Browser: Chrome / Edge (version)
-- AI Quiz Helper version: (see `chrome://extensions`)
+- AI datiKing Helper version: (see `chrome://extensions`)
 - LLM endpoint: (OpenAI / DeepSeek / Ollama / …) + model name
 - Prompt mode: (answer / reason / custom)
 
 ## Console logs
 
-<!-- From the service worker DevTools (chrome://extensions → AI Quiz Helper → "service worker" link), and from the page DevTools (F12). Paste relevant lines starting with [aqh-bg] or [aqh]. -->
+<!-- From the service worker DevTools (chrome://extensions → AI datiKing Helper → "service worker" link), and from the page DevTools (F12). Paste relevant lines starting with [aqh-bg] or [aqh]. -->
